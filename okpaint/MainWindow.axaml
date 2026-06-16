@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="okpaint.MainWindow"
+        Title="okpaint">
+        <Grid RowDefinitions="Auto,*">
+            <!-- area di disegno CANVAS-->
+            <Canvas x:Name="DrawingCanvas" Focusable="True" Grid.Row="1" Background="Black"/>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="20">
+                <Button Content="Pulisci" Click="PulisciTutto" Background="Blue"/>
+                <RadioButton x:Name="Pen" Content="Linea" GroupName="Strumenti" IsCheckedChanged="SelezionaStrumentoGUI"/>
+                <RadioButton x:Name="Rect" Content="Rettangolo" GroupName="Strumenti" IsCheckedChanged="SelezionaStrumentoGUI"/>
+                <RadioButton x:Name="Ell" Content="Ellisse" GroupName="Strumenti" IsCheckedChanged="SelezionaStrumentoGUI"/>
+                <RadioButton x:Name="Gom" Content="Gomma" GroupName="Strumenti" IsCheckedChanged="SelezionaStrumentoGUI"/>
+                <RadioButton x:Name="Text" Content="Testo" GroupName="Strumenti" IsCheckedChanged="SelezionaStrumentoGUI"/>
+            </StackPanel>
+        </Grid>
+</Window>
